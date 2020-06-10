@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+
+<ul>
+  <li *ngFor="let students of studInfo">
+    <div>
+      <p>Stud ID : {{ students.id }}</p>
+      <p>Stud Name : {{ students.name }}</p>
+      <p>Stud Age : {{ students.age }}</p>
+      <p>Stud Address : {{ students.address }}</p>
+    </div>
+  </li>
+</ul>
