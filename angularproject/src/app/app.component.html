@@ -1,61 +1,27 @@
-<h1>{{ title }}</h1>
-<ul>
-  <li *ngFor="let mobPart of mobParts">
-    <p>
-      Mobile Part ID : <b>{{ mobPart.id }}</b>
-    </p>
-    <div>
-      Mobile Part Name :
-      <b
-        ><i>{{ mobPart.name | uppercase }}</i></b
-      >
-    </div>
-    <div>
-      Description : <q>{{ mobPart.description }}</q>
-    </div>
+<!-- nav.component.html -->
+<app-nav></app-nav>
+<!--/ nav.component.html -->
 
-    <P>Price : {{ mobPart.price | currency: "INR" }}</P>
+<!-- banner-one.component.html -->
+<app-banner-one></app-banner-one>
+<!--/ banner-one.component.html -->
 
-    <!-- Customise Pipes Create-->
-    <P>144 : {{ 144 | sqrt }}</P>
+<!-- products.component.html -->
+<app-products></app-products>
+<!--/ products.component.html -->
 
-    <div *ngIf="mobPart.inStock > 0; else outOfStcok">
-      Last <mark>{{ mobPart.inStock }}</mark> Parts Available in stock now...
-    </div>
+<!-- banner-two.component.html -->
+<app-banner-two></app-banner-two>
+<!--/ banner-two.component.html -->
 
-    <ng-template #outOfStcok>
-      <div>
-        Out Of Stock
-      </div>
-    </ng-template>
+<!-- contact-us.component.html -->
+<app-contact-us></app-contact-us>
+<!--/ contact-us.component.html -->
 
-    <p [ngSwitch]="mobPart.country">
-      Country:
-      <img
-        *ngSwitchCase="'Australia'"
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
-        width="24"
-      />
-      <img
-        *ngSwitchCase="'Germany'"
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
-        width="24"
-      />
-      <img
-        *ngSwitchCase="'India'"
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
-        width="24"
-      />
-      <img
-        *ngSwitchDefault
-        src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
-        width="24"
-      />
-    </p>
-  </li>
-</ul>
+<!-- banner-three.component.html -->
+<app-banner-three></app-banner-three>
+<!--/ banner-three.component.html -->
 
-<!-- directives : angular att -->
-<!-- ngNonBindable : att direcive -->
-
-<!-- 3 types of directive -->
+<!-- footer.component.html -->
+<app-footer></app-footer>/
+<!-- footer.component.html -->
