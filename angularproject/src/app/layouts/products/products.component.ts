@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class ProductsComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+
   title = 'Hello Angular';
 
   cityArr = ['Pune', 'Mumbai', 'Hydrabad'];
