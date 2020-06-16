@@ -10,9 +10,14 @@ import { ProductsComponent } from './layouts/products/products.component';
 import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
 import { ContactUsComponent } from './layouts/contact-us/contact-us.component';
 import { BannerThreeComponent } from './layouts/banner-three/banner-three.component';
+import { SimpleStyleDirective } from './directives/simple-style.directive';
+import { MobPartsComponent } from './product/mob-parts/mob-parts.component';
+import { PensComponent } from './product/pens/pens.component';
+import { BooksComponent } from './product/books/books.component';
+import { LaptopsComponent } from './product/laptops/laptops.component';
 
 @NgModule({
-  declarations: [AppComponent, SqrtPipe, FooterComponent, NavComponent, BannerOneComponent, ProductsComponent, BannerTwoComponent, ContactUsComponent, BannerThreeComponent],
+  declarations: [AppComponent, SqrtPipe, FooterComponent, NavComponent, BannerOneComponent, ProductsComponent, BannerTwoComponent, ContactUsComponent, BannerThreeComponent, SimpleStyleDirective, MobPartsComponent, PensComponent, BooksComponent, LaptopsComponent],
   imports: [BrowserModule],
   bootstrap: [AppComponent],
 })
