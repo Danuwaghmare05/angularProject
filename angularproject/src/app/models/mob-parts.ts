@@ -5,4 +5,7 @@ export class MobParts {
   inStock: number;
   price: number;
   country: string;
+  prdImg: string;
+  clsVar: boolean;
+  quantity: number;
 }

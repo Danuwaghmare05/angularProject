@@ -6,9 +6,13 @@
   <ul>
     <li *ngFor="let mobPart of mobParts">
       <div class="col s12 m4">
-        <div class="card">
+        <div class="card" [class.clsName]="mobPart.clsVar">
           <div class="card-image">
-            <img src="../../../assets/img/sample-1.jpg" />
+            <!-- Binding Methods are three methods are used-->
+            <!--<img src="{{mobPart.prdImg}}" />-->
+            <!--<img [src]="mobPart.prdImg" />-->
+            <img src="../../../assets/img/{{ mobPart.prdImg }}" />
+
             <span class="card-title">{{ mobPart.name | uppercase }}</span>
             <a class="btn-floating halfway-fab waves-effect waves-light red"
               ><i class="material-icons">add</i></a
@@ -42,6 +46,20 @@
                 Out Of Stock
               </div>
             </ng-template>
+
+            <p align="center">
+              <a
+                class="waves-effect waves-light btn-small"
+                (click)="downQuantity(mobPart)"
+                ><i class="material-icons">remove</i></a
+              >
+              {{ mobPart.quantity }}
+              <a
+                class="waves-effect waves-light btn-small"
+                (click)="upQuantity(mobPart)"
+                ><i class="material-icons">add</i></a
+              >
+            </p>
 
             <p [ngSwitch]="mobPart.country">
               Country:
