@@ -1,43 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MobParts } from 'src/app/models/mob-parts';
+import { MOBPARTS } from './mock-data';
+
 @Component({
   selector: 'app-mob-parts',
   templateUrl: './mob-parts.component.html',
 })
 export class MobPartsComponent implements OnInit {
-  constructor() {}
+  name: string = 'Alex';
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // component
+    this.mobParts = MOBPARTS;
+    console.log('1 ngOnInit Block...!');
+  }
 
-  cityArr = ['Pune', 'Mumbai', 'Hydrabad'];
-  //console.log(cityArr);
+  constructor() {
+    console.log('2 Constructor Block...!');
+  } // class: DI -> obj init
 
-  mobParts = [
-    {
-      id: 1001,
-      name: 'Screen 5.5',
-      description: '5.5 Screen for Moto g',
-      inStock: 5,
-      price: 1200,
-      country: 'Germany',
-    },
-    {
-      id: 1002,
-      name: 'Screen 5',
-      description: '5 Screen for Samsung',
-      inStock: 8,
-      price: 1200,
-      country: 'India',
-    },
-    {
-      id: 1003,
-      name: 'key panel',
-      description: 'Key panel for Nokia',
-      inStock: 1,
-      price: 1200,
-      country: 'Australia',
-    },
-  ];
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.mobParts = [];
+    console.log('3 ngOnDestroy Block...!');
+  }
+
+  ngAfterViewInit() {
+    console.log('4 ngAfterViewInit Block...!');
+  }
+
+  ngAfterContentInit() {
+    console.log('5 ngAfterContentInit Block...!');
+  }
+
+  mobParts: MobParts[]; // 10MB
 
   totProd() {
     let totalprod = 0;

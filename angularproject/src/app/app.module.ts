@@ -17,7 +17,22 @@ import { BooksComponent } from './product/books/books.component';
 import { LaptopsComponent } from './product/laptops/laptops.component';
 
 @NgModule({
-  declarations: [AppComponent, SqrtPipe, FooterComponent, NavComponent, BannerOneComponent, ProductsComponent, BannerTwoComponent, ContactUsComponent, BannerThreeComponent, SimpleStyleDirective, MobPartsComponent, PensComponent, BooksComponent, LaptopsComponent],
+  declarations: [
+    AppComponent,
+    SqrtPipe,
+    FooterComponent,
+    NavComponent,
+    BannerOneComponent,
+    ProductsComponent,
+    BannerTwoComponent,
+    ContactUsComponent,
+    BannerThreeComponent,
+    SimpleStyleDirective,
+    MobPartsComponent,
+    PensComponent,
+    BooksComponent,
+    LaptopsComponent,
+  ],
   imports: [BrowserModule],
   bootstrap: [AppComponent],
 })
