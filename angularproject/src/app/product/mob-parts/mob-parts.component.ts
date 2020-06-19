@@ -52,4 +52,8 @@ export class MobPartsComponent implements OnInit {
   upQuantity(mobPart) {
     if (mobPart.quantity < mobPart.inStock) mobPart.quantity++;
   }
+
+  catchVal(event) {
+    console.log('We are in catchval', event);
+  }
 }

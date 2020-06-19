@@ -5,12 +5,12 @@ export const MOBPARTS: MobParts[] = [
     id: 1001,
     name: 'Screen 5.5',
     description: '5.5 Screen for Moto g',
-    inStock: 6,
+    inStock: 2000,
     price: 1200,
     country: 'Germany',
     prdImg: 'mob1.png',
     clsVar: true,
-    quantity: 5,
+    quantity: 0,
   },
   {
     id: 1002,
@@ -32,6 +32,6 @@ export const MOBPARTS: MobParts[] = [
     country: 'Australia',
     prdImg: 'mob3.png',
     clsVar: true,
-    quantity: 5,
+    quantity: 0,
   },
 ];

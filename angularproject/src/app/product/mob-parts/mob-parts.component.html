@@ -53,6 +53,11 @@
                 (click)="downQuantity(mobPart)"
                 ><i class="material-icons">remove</i></a
               >
+              <input
+                [value]="mobPart.quantity"
+                (input)="catchVal($event.target.value)"
+                [(ngModel)]="mobPart.quantity"
+              />
               {{ mobPart.quantity }}
               <a
                 class="waves-effect waves-light btn-small"

@@ -1,7 +1,9 @@
 import { Component, NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { NavComponent } from './layouts/nav/nav.component';
@@ -33,7 +35,7 @@ import { LaptopsComponent } from './product/laptops/laptops.component';
     BooksComponent,
     LaptopsComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
