@@ -2,7 +2,6 @@ import { Component, NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SqrtPipe } from './pipes/sqrt.pipe';
@@ -21,15 +20,10 @@ import { LaptopsComponent } from './product/laptops/laptops.component';
 import { HomeComponent } from './layouts/home/home.component';
 import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
 
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: HomeComponent },
-  { path: 'mobile', component: MobPartsComponent },
-  { path: 'books', component: BooksComponent },
-  { path: 'laptop', component: LaptopsComponent },
-  { path: 'pens', component: PensComponent },
-  { path: '**', component: PageNotFoundComponent },
-];
+import { AppRoutingModule } from './modules/app-routing.module';
+import { MotoComponent } from './product/mob-parts/moto/moto.component';
+import { SamsungComponent } from './product/mob-parts/samsung/samsung.component';
+//import { AllComponentsModule } from './modules/all-components.module';
 
 @NgModule({
   declarations: [
@@ -49,8 +43,10 @@ const appRoutes: Routes = [
     LaptopsComponent,
     HomeComponent,
     PageNotFoundComponent,
+    MotoComponent,
+    SamsungComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, FormsModule, AppRoutingModule], //AllComponentsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

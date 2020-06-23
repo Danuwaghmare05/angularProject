@@ -1,0 +1,36 @@
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { HomeComponent } from '../layouts/home/home.component';
+import { MobPartsComponent } from '../product/mob-parts/mob-parts.component';
+import { BooksComponent } from '../product/books/books.component';
+import { LaptopsComponent } from '../product/laptops/laptops.component';
+import { PensComponent } from '../product/pens/pens.component';
+import { PageNotFoundComponent } from '../layouts/page-not-found/page-not-found.component';
+import { MotoComponent } from '../product/mob-parts/moto/moto.component';
+import { SamsungComponent } from '../product/mob-parts/samsung/samsung.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  {
+    path: 'mobile',
+    component: MobPartsComponent,
+    children: [
+      { path: 'moto', component: MotoComponent },
+      { path: 'sansung', component: SamsungComponent },
+    ],
+  },
+  { path: 'books', component: BooksComponent },
+  { path: 'laptop', component: LaptopsComponent },
+  { path: 'pens', component: PensComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
+
+@NgModule({
+  declarations: [],
+  imports: [CommonModule, RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
