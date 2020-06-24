@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SqrtPipe } from './pipes/sqrt.pipe';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
@@ -24,11 +23,17 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { MotoComponent } from './product/mob-parts/moto/moto.component';
 import { SamsungComponent } from './product/mob-parts/samsung/samsung.component';
 //import { AllComponentsModule } from './modules/all-components.module';
+import { MobileNavComponent } from './product/mob-parts/mobile-nav/mobile-nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Used For Checkbox
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { AllMaterialsModule } from './modules/all-materials.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SqrtPipe,
     FooterComponent,
     NavComponent,
     BannerOneComponent,
@@ -45,8 +50,19 @@ import { SamsungComponent } from './product/mob-parts/samsung/samsung.component'
     PageNotFoundComponent,
     MotoComponent,
     SamsungComponent,
+    MobileNavComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule], //AllComponentsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    //AllComponentsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    AllMaterialsModule,
+  ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

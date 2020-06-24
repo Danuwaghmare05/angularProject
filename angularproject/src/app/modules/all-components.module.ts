@@ -1,40 +1,12 @@
-import { ContactUsComponent } from './../layouts/contact-us/contact-us.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SqrtPipe } from '../pipes/sqrt.pipe';
-import { FooterComponent } from '../layouts/footer/footer.component';
-import { NavComponent } from '../layouts/nav/nav.component';
-import { BannerOneComponent } from '../layouts/banner-one/banner-one.component';
-import { ProductsComponent } from '../layouts/products/products.component';
-import { BannerTwoComponent } from '../layouts/banner-two/banner-two.component';
-import { BannerThreeComponent } from '../layouts/banner-three/banner-three.component';
-import { SimpleStyleDirective } from '../directives/simple-style.directive';
 import { MobPartsComponent } from '../product/mob-parts/mob-parts.component';
-import { PensComponent } from '../product/pens/pens.component';
-import { BooksComponent } from '../product/books/books.component';
-import { LaptopsComponent } from '../product/laptops/laptops.component';
-import { HomeComponent } from '../layouts/home/home.component';
 import { PageNotFoundComponent } from '../layouts/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [
-    SqrtPipe,
-    FooterComponent,
-    NavComponent,
-    BannerOneComponent,
-    ProductsComponent,
-    BannerTwoComponent,
-    ContactUsComponent,
-    BannerThreeComponent,
-    SimpleStyleDirective,
-    MobPartsComponent,
-    PensComponent,
-    BooksComponent,
-    LaptopsComponent,
-    HomeComponent,
-    PageNotFoundComponent,
-  ],
+  declarations: [MobPartsComponent, PageNotFoundComponent],
   imports: [CommonModule],
+  exports: [MobPartsComponent, PageNotFoundComponent],
 })
 export class AllComponentsModule {}
