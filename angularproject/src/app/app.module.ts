@@ -1,3 +1,4 @@
+import { CommonService } from './service/common.service';
 import { Component, NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
@@ -64,5 +65,6 @@ import { AllMaterialsModule } from './modules/all-materials.module';
   ],
 
   bootstrap: [AppComponent],
+  providers: [CommonService],
 })
 export class AppModule {}

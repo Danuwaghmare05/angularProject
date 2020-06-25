@@ -1,8 +1,8 @@
 import { MobParts } from 'src/app/models/mob-parts';
 
-export const MOBPARTS: MobParts[] = [
+export const DBMOBPARTS: MobParts[] = [
   {
-    id: 1001,
+    id: 11112341,
     name: 'Screen 5.5',
     description: '5.5 Screen for Moto g',
     inStock: 2000,

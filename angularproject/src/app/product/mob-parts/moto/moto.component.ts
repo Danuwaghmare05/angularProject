@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
       moto works!
     </p>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class MotoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
