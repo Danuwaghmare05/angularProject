@@ -27,7 +27,10 @@ export class MobPartsComponent implements OnInit {
     //this.mobParts = commonService.getMobParts();
 
     // 3. Data from Provider using D.I.
-    this.mobParts = this.commonService.getMobParts();
+    //this.mobParts = this.commonService.getMobParts();
+
+    //4. Data from API
+    this.commonService.getMobParts().subscribe((res) => (this.mobParts = res));
   }
 
   ngOnDestroy(): void {
@@ -49,8 +52,10 @@ export class MobPartsComponent implements OnInit {
 
   totProd() {
     let totalprod = 0;
-    for (let mobPart of this.mobParts) {
-      totalprod = totalprod + mobPart.inStock;
+    if (Array.isArray(this.mobParts)) {
+      for (let mobPart of this.mobParts) {
+        totalprod = totalprod + mobPart.inStock;
+      }
     }
     return totalprod;
   }

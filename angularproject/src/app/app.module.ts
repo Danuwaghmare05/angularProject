@@ -3,6 +3,7 @@ import { Component, NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './layouts/footer/footer.component';
@@ -62,6 +63,7 @@ import { AllMaterialsModule } from './modules/all-materials.module';
     MatCheckboxModule,
     MatDatepickerModule,
     AllMaterialsModule,
+    HttpModule,
   ],
 
   bootstrap: [AppComponent],

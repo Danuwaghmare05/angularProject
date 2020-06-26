@@ -1,0 +1,37 @@
+{
+  "apiData": [
+    {
+      "id": 10101011001,
+      "name": "Screen 5.5",
+      "description": "5.5 Screen for Moto g",
+      "inStock": 2000,
+      "price": 1200,
+      "country": "Germany",
+      "prdImg": "mobile4.jpg",
+      "clsVar": true,
+      "quantity": 0
+    },
+    {
+      "id": 1002,
+      "name": "Screen 5",
+      "description": "5 Screen for Samsung",
+      "inStock": 9,
+      "price": 1200,
+      "country": "India",
+      "prdImg": "mobile5.jpg",
+      "clsVar": true,
+      "quantity": 0
+    },
+    {
+      "id": 1003,
+      "name": "key panel",
+      "description": "Key panel for Nokia",
+      "inStock": 0,
+      "price": 1200,
+      "country": "Australia",
+      "prdImg": "mobile7.jpg",
+      "clsVar": true,
+      "quantity": 0
+    }
+  ]
+}
