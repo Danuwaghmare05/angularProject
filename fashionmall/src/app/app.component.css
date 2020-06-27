@@ -1,0 +1,10 @@
+li {
+  color: gray;
+  font-style: italic;
+  box-shadow: 1px 1px 5px orange;
+  text-align: justify;
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
