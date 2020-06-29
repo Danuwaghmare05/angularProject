@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from '../layouts/page-not-found/page-not-found.
 import { MotoComponent } from '../product/mob-parts/moto/moto.component';
 import { SamsungComponent } from '../product/mob-parts/samsung/samsung.component';
 import { MobileNavComponent } from '../product/mob-parts/mobile-nav/mobile-nav.component';
+import { DashboardComponent } from '../admin/dashboard/dashboard.component';
+import { LoginComponent } from '../admin/login/login.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -27,6 +30,12 @@ const appRoutes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'laptop', component: LaptopsComponent },
   { path: 'pens', component: PensComponent },
+  {
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+    component: DashboardComponent,
+  },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

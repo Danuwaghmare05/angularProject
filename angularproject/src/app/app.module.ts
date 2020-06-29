@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { CommonService } from './service/common.service';
 import { Component, NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -27,12 +28,13 @@ import { SamsungComponent } from './product/mob-parts/samsung/samsung.component'
 //import { AllComponentsModule } from './modules/all-components.module';
 import { MobileNavComponent } from './product/mob-parts/mobile-nav/mobile-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 //Used For Checkbox
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AllMaterialsModule } from './modules/all-materials.module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +55,8 @@ import { AllMaterialsModule } from './modules/all-materials.module';
     MotoComponent,
     SamsungComponent,
     MobileNavComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,6 @@ import { AllMaterialsModule } from './modules/all-materials.module';
   ],
 
   bootstrap: [AppComponent],
-  providers: [CommonService],
+  providers: [CommonService, AuthGuard],
 })
 export class AppModule {}

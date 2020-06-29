@@ -1,0 +1,8 @@
+<p>login works!</p>
+
+<input type="text" #username /><br />
+<input type="password" #password /><br />
+
+<button (click)="check(username.value, password.value)">Login</button>
+
+<span style="color: red;">{{ msg }}</span>
