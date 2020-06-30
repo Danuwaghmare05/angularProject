@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   check(username: string, password: string) {
     var output = this.authService.checkUserNameAndPassword(username, password);
-    if (output == true) {
+    if (output) {
       this.router.navigate(['/dashboard']);
     } else {
       this.msg = 'Invalid username or password';

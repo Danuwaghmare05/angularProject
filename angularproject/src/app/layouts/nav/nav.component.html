@@ -8,7 +8,10 @@
       <li><a routerLink="laptop">Laptop</a></li>
       <li><a routerLink="pens">Pen</a></li>
       <li><a routerLink="dashboard">Dashboard</a></li>
-      <li><a routerLink="login">Login</a></li>
+      <!--<li *ngIf="isLogin()"><a routerLink="login">Login</a></li>-->
+      <li *ngIf="isLogin()">
+        <a routerLink="home" (click)="Logout()">Logout</a>
+      </li>
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
