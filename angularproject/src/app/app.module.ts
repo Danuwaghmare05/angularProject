@@ -35,6 +35,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AllMaterialsModule } from './modules/all-materials.module';
+import { LazyModule } from './modules/lazy/lazy.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,7 @@ import { AllMaterialsModule } from './modules/all-materials.module';
     MatDatepickerModule,
     AllMaterialsModule,
     HttpModule,
+    LazyModule,
   ],
 
   bootstrap: [AppComponent],

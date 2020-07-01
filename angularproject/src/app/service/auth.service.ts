@@ -16,4 +16,15 @@ export class AuthService {
       return false;
     }
   }
+
+  //Check logic for Admin login for SetMRP
+  checkAdminLoginPassword(adminName: string, adminPass: string) {
+    if (adminName == 'admin' && adminPass == 'admin') {
+      //localstorage save admin name tempMemory
+      localStorage.setItem('adminName', 'admin');
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
