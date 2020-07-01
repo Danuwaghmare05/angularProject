@@ -17,11 +17,11 @@ export class AuthService {
     }
   }
 
-  //Check logic for Admin login for SetMRP
-  checkAdminLoginPassword(adminName: string, adminPass: string) {
-    if (adminName == 'admin' && adminPass == 'admin') {
-      //localstorage save admin name tempMemory
-      localStorage.setItem('adminName', 'admin');
+  //Create logic and check MRP admin Username and password
+  checkAdminNamePassword(adminName: string, adminPassword: string) {
+    if (adminName == 'payment' && adminPassword == 'payment') {
+      //localstorage save adminName tempMemory
+      localStorage.setItem('adminName', 'payment');
       return true;
     } else {
       return false;

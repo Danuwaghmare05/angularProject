@@ -1,3 +1,6 @@
+import { LoginMrpComponent } from './../admin/dashboard/login-mrp/login-mrp.component';
+import { SetMrpComponent } from './../admin/dashboard/set-mrp/set-mrp.component';
+import { DashboardNavComponent } from './../admin/dashboard/dashboard-nav/dashboard-nav.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +17,7 @@ import { MobileNavComponent } from '../product/mob-parts/mobile-nav/mobile-nav.c
 import { DashboardComponent } from '../admin/dashboard/dashboard.component';
 import { LoginComponent } from '../admin/login/login.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { AdminGuard } from '../guards/admin.guard';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,9 +37,14 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     canActivate: [AuthGuard],
-    component: DashboardComponent,
+    component: DashboardNavComponent,
+    children: [
+      { path: '', component: DashboardComponent },
+      { path: 'setMRP', canActivate: [AdminGuard], component: SetMrpComponent },
+    ],
   },
   { path: 'login', component: LoginComponent },
+  { path: 'loginmrp', component: LoginMrpComponent },
   { path: 'lazy', loadChildren: '../modules/lazy/lazy.module#LazyModule' },
   { path: '**', component: PageNotFoundComponent },
 ];

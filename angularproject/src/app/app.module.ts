@@ -30,12 +30,16 @@ import { MobileNavComponent } from './product/mob-parts/mobile-nav/mobile-nav.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './admin/login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { DashboardNavComponent } from './admin/dashboard/dashboard-nav/dashboard-nav.component';
+import { SetMrpComponent } from './admin/dashboard/set-mrp/set-mrp.component';
 
 //Used For Checkbox
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AllMaterialsModule } from './modules/all-materials.module';
+
 import { LazyModule } from './modules/lazy/lazy.module';
+import { LoginMrpComponent } from './admin/dashboard/login-mrp/login-mrp.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,9 @@ import { LazyModule } from './modules/lazy/lazy.module';
     MobileNavComponent,
     LoginComponent,
     DashboardComponent,
+    DashboardNavComponent,
+    SetMrpComponent,
+    LoginMrpComponent,
   ],
   imports: [
     BrowserModule,
