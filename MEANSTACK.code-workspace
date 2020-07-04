@@ -1,16 +1,19 @@
 {
-    "folders": [
-        {
-            "path": "."
-        },
-        {
-            "path": "..\\danu.github.io"
-        },
-        {
-            "path": "..\\ngOnline"
-        },
-        {
-            "path": "..\\webSahu.github.io"
-        }
-    ]
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\danu.github.io"
+    },
+    {
+      "path": "..\\ngOnline"
+    },
+    {
+      "path": "..\\webSahu.github.io"
+    },
+    {
+      "path": "..\\bootstrapTheme"
+    }
+  ]
 }
