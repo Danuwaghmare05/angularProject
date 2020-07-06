@@ -21,11 +21,11 @@
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "./node_modules/startbootstrap-agency/dist/css/styles.css"
+              "node_modules/startbootstrap-agency/dist/css/styles.css"
             ],
             "scripts": [
-              "./node_modules/startbootstrap-agency/dist/js/scripts.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/startbootstrap-agency/dist/js/scripts.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -85,11 +85,11 @@
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "./node_modules/startbootstrap-agency/dist/css/styles.css"
+              "node_modules/startbootstrap-agency/dist/css/styles.css"
             ],
             "scripts": [
-              "./node_modules/startbootstrap-agency/dist/js/scripts.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/startbootstrap-agency/dist/js/scripts.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
         },
