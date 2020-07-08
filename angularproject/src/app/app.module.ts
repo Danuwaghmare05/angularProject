@@ -41,6 +41,11 @@ import { AllMaterialsModule } from './modules/all-materials.module';
 import { LazyModule } from './modules/lazy/lazy.module';
 import { LoginMrpComponent } from './admin/dashboard/login-mrp/login-mrp.component';
 
+//for Cloud Hosting
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { firebaseConfig } from './firebase/firebase-config';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +83,8 @@ import { LoginMrpComponent } from './admin/dashboard/login-mrp/login-mrp.compone
     AllMaterialsModule,
     HttpModule,
     LazyModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ],
 
   bootstrap: [AppComponent],

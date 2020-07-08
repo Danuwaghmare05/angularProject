@@ -2,6 +2,7 @@ import { CommonService } from './../../service/common.service';
 import { Component, OnInit } from '@angular/core';
 
 import { MobParts } from 'src/app/models/mob-parts';
+
 //import { MOBPARTS } from './mock-data';
 
 @Component({
