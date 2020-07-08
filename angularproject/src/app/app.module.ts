@@ -45,6 +45,7 @@ import { LoginMrpComponent } from './admin/dashboard/login-mrp/login-mrp.compone
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { firebaseConfig } from './firebase/firebase-config';
+import { HostDirective } from './directives/host.directive';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { firebaseConfig } from './firebase/firebase-config';
     DashboardNavComponent,
     SetMrpComponent,
     LoginMrpComponent,
+    HostDirective,
   ],
   imports: [
     BrowserModule,
