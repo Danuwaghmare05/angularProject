@@ -18,5 +18,27 @@ export class MotoComponent implements OnInit {
       });
   }
 
+  totProd() {
+    let totalprod = 0;
+    if (Array.isArray(this.mobParts)) {
+      for (let mobPart of this.mobParts) {
+        totalprod = totalprod + mobPart.inStock;
+      }
+    }
+    return totalprod;
+  }
+
+  downQuantity(mobPart) {
+    if (mobPart.quantity != 0) mobPart.quantity--;
+  }
+
+  upQuantity(mobPart) {
+    if (mobPart.quantity < mobPart.inStock) mobPart.quantity++;
+  }
+
+  catchVal(event) {
+    console.log('We are in catchval', event);
+  }
+
   ngOnInit(): void {}
 }
