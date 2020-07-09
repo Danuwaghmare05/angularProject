@@ -46,6 +46,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { firebaseConfig } from './firebase/firebase-config';
 import { HostDirective } from './directives/host.directive';
+import { LapiDetailsComponent } from './product/laptops/lapi-details/lapi-details.component';
+import { LapiOffersComponent } from './product/laptops/lapi-offers/lapi-offers.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { HostDirective } from './directives/host.directive';
     SetMrpComponent,
     LoginMrpComponent,
     HostDirective,
+    LapiDetailsComponent,
+    LapiOffersComponent,
   ],
   imports: [
     BrowserModule,

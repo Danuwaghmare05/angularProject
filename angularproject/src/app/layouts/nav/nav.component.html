@@ -6,6 +6,17 @@
       <li><a routerLink="mobile">Mobile</a></li>
       <li><a routerLink="books">Books</a></li>
       <li><a routerLink="laptop">Laptop</a></li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet1: ['lapiDetails'] } }]"
+          >Laptop Details</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet2: ['lapiOffers'] } }]"
+          >Laptop Offers</a
+        >
+      </li>
+
       <li><a routerLink="pens">Pen</a></li>
       <li><a routerLink="dashboard">Dashboard</a></li>
       <!--<li *ngIf="isLogin()"><a routerLink="login">Login</a></li>-->

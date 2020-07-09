@@ -18,6 +18,8 @@ import { DashboardComponent } from '../admin/dashboard/dashboard.component';
 import { LoginComponent } from '../admin/login/login.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { AdminGuard } from '../guards/admin.guard';
+import { LapiDetailsComponent } from '../product/laptops/lapi-details/lapi-details.component';
+import { LapiOffersComponent } from '../product/laptops/lapi-offers/lapi-offers.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,6 +35,9 @@ const appRoutes: Routes = [
   },
   { path: 'books', component: BooksComponent },
   { path: 'laptop', component: LaptopsComponent },
+  { path: 'lapiDetails', component: LapiDetailsComponent, outlet: 'outlet1' },
+  { path: 'lapiOffers', component: LapiOffersComponent, outlet: 'outlet2' },
+
   { path: 'pens', component: PensComponent },
   {
     path: 'dashboard',
