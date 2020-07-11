@@ -12,6 +12,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PortfolioComponent } from './layouts/portfolio/portfolio.component';
 import { PortfolioModalsComponent } from './layouts/portfolio-modals/portfolio-modals.component';
 import { ServicesComponent } from './layouts/services/services.component';
+import { SqrtPipe } from './pipes/sqrt.pipe';
+import { MyStyleDirective } from './directives/my-style.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ServicesComponent } from './layouts/services/services.component';
     PortfolioComponent,
     PortfolioModalsComponent,
     ServicesComponent,
+    SqrtPipe,
+    MyStyleDirective,
   ],
   imports: [BrowserModule],
   bootstrap: [FirstComponent],

@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<div class="row">
+  <p>dashboard works!</p>
+  <label><h1>Add Poducts List</h1></label>
+  <input type="text" /><br />
+
+  <button class="waves-effect waves-light btn">Add Product</button><br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product List</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success" *ngFor="let mobPart of mobParts">
+        <td (click)="check(prdName.value)" #prdName>{{ mobPart.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

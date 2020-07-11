@@ -27,23 +27,16 @@
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
-      <li><a routerLink="home">Home</a></li>
-      <li>
-        <a
-          routerLink="mobile"
-          data-toggle="collapse"
-          data-target=".navbar-collapse.show"
-          >Mobile</a
-        >
-      </li>
-      <li><a routerLink="books">Books</a></li>
-      <li><a routerLink="laptop">Laptop</a></li>
-      <li><a routerLink="pens">Pen</a></li>
-      <li><a routerLink="dashboard">Dashboard</a></li>
+      <li><a routerLink="home" class="sidenav-close">Home</a></li>
+      <li><a routerLink="mobile" class="sidenav-close">Mobile</a></li>
+      <li><a routerLink="books" class="sidenav-close">Books</a></li>
+      <li><a routerLink="laptop" class="sidenav-close">Laptop</a></li>
+      <li><a routerLink="pens" class="sidenav-close">Pen</a></li>
+      <li><a routerLink="dashboard" class="sidenav-close">Dashboard</a></li>
       <li *ngIf="isLogin()">
-        <a routerLink="home" (click)="Logout()">Logout</a>
+        <a routerLink="home" (click)="Logout()" class="sidenav-close">Logout</a>
       </li>
-      <li><a routerLink="/lazy/lazy-child">Lazy</a></li>
+      <li><a routerLink="/lazy/lazy-child" class="sidenav-close">Lazy</a></li>
     </ul>
     <a href="#" data-target="nav-mobile" class="sidenav-trigger"
       ><i class="material-icons">menu</i></a

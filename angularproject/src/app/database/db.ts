@@ -3,8 +3,8 @@ import { MobParts } from 'src/app/models/mob-parts';
 export const DBMOBPARTS: MobParts[] = [
   {
     id: 11112341,
-    name: 'Screen 5.5',
-    description: '5.5 Screen for Moto g',
+    name: 'Screen 5.1',
+    description: '5.1 Screen for Moto g',
     inStock: 2000,
     price: 1200,
     country: 'Germany',
@@ -14,8 +14,8 @@ export const DBMOBPARTS: MobParts[] = [
   },
   {
     id: 1002,
-    name: 'Screen 5',
-    description: '5 Screen for Samsung',
+    name: 'Screen 5.2',
+    description: '5.2 Screen for Samsung',
     inStock: 9,
     price: 1200,
     country: 'India',
@@ -25,8 +25,8 @@ export const DBMOBPARTS: MobParts[] = [
   },
   {
     id: 1003,
-    name: 'key panel',
-    description: 'Key panel for Nokia',
+    name: 'Screen 5.3',
+    description: '5.3 Screen for Samsung',
     inStock: 0,
     price: 1200,
     country: 'Australia',
