@@ -34,4 +34,15 @@ export const DBMOBPARTS: MobParts[] = [
     clsVar: true,
     quantity: 0,
   },
+  {
+    id: 1004,
+    name: 'Screen 5.4',
+    description: '5.4 Screen for Samsung',
+    inStock: 0,
+    price: 100,
+    country: 'India',
+    prdImg: 'mobile6.jpg',
+    clsVar: true,
+    quantity: 0,
+  },
 ];

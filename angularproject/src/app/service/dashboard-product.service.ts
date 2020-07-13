@@ -10,4 +10,9 @@ export class DashboardProductService {
   getMobParts() {
     return DBMOBPARTS;
   }
+
+  //Create logic and check Username and password
+  checkProductName(prdName: string) {
+    console.log('ooooooo');
+  }
 }

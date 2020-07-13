@@ -1,0 +1,17 @@
+<h1>temp-forms works!</h1>
+<form>
+  <div class="input-field">
+    <label for="username">User Name</label>
+    <input
+      name="name"
+      type="text"
+      ngModel
+      #tempVar="ngModel"
+      (keyup)="showData(tempVar)"
+      required
+    />
+    <div style="color: red;" *ngIf="tempVar.touched && !tempVar.valid">
+      Something Went Wrong...!
+    </div>
+  </div>
+</form>

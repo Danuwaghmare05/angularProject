@@ -13,6 +13,9 @@ export class DashboardComponent implements OnInit {
     let dps = new DashboardProductService();
     this.mobParts = dps.getMobParts();
   }
-
   mobParts: MobParts[];
+
+  check(prdName: string) {
+    var output = this.dps.checkProductName(prdName);
+  }
 }

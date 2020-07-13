@@ -48,6 +48,8 @@ import { firebaseConfig } from './firebase/firebase-config';
 import { HostDirective } from './directives/host.directive';
 import { LapiDetailsComponent } from './product/laptops/lapi-details/lapi-details.component';
 import { LapiOffersComponent } from './product/laptops/lapi-offers/lapi-offers.component';
+import { TempFormsComponent } from './components/forms/temp-forms/temp-forms.component';
+import { ReactiveFormsComponent } from './components/forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { LapiOffersComponent } from './product/laptops/lapi-offers/lapi-offers.c
     HostDirective,
     LapiDetailsComponent,
     LapiOffersComponent,
+    TempFormsComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,

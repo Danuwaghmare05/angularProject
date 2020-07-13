@@ -1,3 +1,5 @@
+import { ReactiveFormsComponent } from './../components/forms/reactive-forms/reactive-forms.component';
+import { TempFormsComponent } from './../components/forms/temp-forms/temp-forms.component';
 import { LoginMrpComponent } from './../admin/dashboard/login-mrp/login-mrp.component';
 import { SetMrpComponent } from './../admin/dashboard/set-mrp/set-mrp.component';
 import { DashboardNavComponent } from './../admin/dashboard/dashboard-nav/dashboard-nav.component';
@@ -23,6 +25,9 @@ import { LapiOffersComponent } from '../product/laptops/lapi-offers/lapi-offers.
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'tempForm', component: TempFormsComponent },
+  { path: 'reactiveForm', component: ReactiveFormsComponent },
+
   { path: '', component: HomeComponent },
   {
     path: 'mobile',
