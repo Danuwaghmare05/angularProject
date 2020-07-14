@@ -8,14 +8,16 @@ import { MobParts } from 'src/app/models/mob-parts';
 })
 export class DashboardComponent implements OnInit {
   constructor(private dps: DashboardProductService) {}
-
+  dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
     let dps = new DashboardProductService();
     this.mobParts = dps.getMobParts();
+
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      processing: true,
+    };
   }
   mobParts: MobParts[];
-
-  check(prdName: string) {
-    var output = this.dps.checkProductName(prdName);
-  }
 }

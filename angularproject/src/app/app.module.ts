@@ -51,6 +51,9 @@ import { LapiOffersComponent } from './product/laptops/lapi-offers/lapi-offers.c
 import { TempFormsComponent } from './components/forms/temp-forms/temp-forms.component';
 import { ReactiveFormsComponent } from './components/forms/reactive-forms/reactive-forms.component';
 
+//for DataTables
+import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +98,7 @@ import { ReactiveFormsComponent } from './components/forms/reactive-forms/reacti
     LazyModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    DataTablesModule,
   ],
 
   bootstrap: [AppComponent],

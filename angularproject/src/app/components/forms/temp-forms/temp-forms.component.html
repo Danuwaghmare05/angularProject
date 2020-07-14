@@ -1,17 +1,89 @@
 <h1>temp-forms works!</h1>
-<form>
-  <div class="input-field">
-    <label for="username">User Name</label>
-    <input
-      name="name"
-      type="text"
-      ngModel
-      #tempVar="ngModel"
-      (keyup)="showData(tempVar)"
-      required
-    />
-    <div style="color: red;" *ngIf="tempVar.touched && !tempVar.valid">
-      Something Went Wrong...!
+<form #fTempVar="ngForm" (ngSubmit)="formShow(fTempVar)">
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="username">User Name</label>
+      <input
+        name="name"
+        type="text"
+        ngModel
+        #tempVar="ngModel"
+        (keyup)="showData(tempVar)"
+        required
+        minlength="3"
+        pattern="Danu"
+      />
+      <div style="color: red;" *ngIf="tempVar.touched && !tempVar.valid">
+        <div *ngIf="tempVar.errors.required">Something Went Wrong..!</div>
+        <div *ngIf="tempVar.errors.minlength">
+          Must be minimum
+          {{ tempVar.errors.minlength.requiredLength }} letters..!
+        </div>
+        <div *ngIf="tempVar.errors.pattern">Pattern</div>
+      </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <select name="cities" ngModel>
+        <option value="" disabled selected>Choose your City</option>
+        <option *ngFor="let city of cities" [value]="city.code">{{
+          city.name
+        }}</option>
+      </select>
+      <label for="city">City</label>
+    </div>
+
+    <div class="input-field col s6">
+      <label>
+        <input
+          ngModel
+          name="Doc Verify"
+          type="checkbox"
+          checked="checked"
+          class="filled-in"
+        />
+        <span>Document Verify</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <p>
+        <label>
+          <input
+            class="with-gap"
+            value="Male"
+            ngModel
+            name="Gender"
+            type="radio"
+          />
+          <span>Male</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input
+            class="with-gap"
+            value="Female"
+            ngModel
+            name="Gender"
+            type="radio"
+          />
+          <span>Female</span>
+        </label>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <a class="waves-effect waves-light btn" type="submit">Submit</a>
+    </div>
+  </div>
+
+  <hr />
+  {{ fTempVar.value | json }}
 </form>
