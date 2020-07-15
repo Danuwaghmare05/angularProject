@@ -3,7 +3,7 @@ import { CommonService } from './service/common.service';
 import { Component, NgModule } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -88,6 +88,7 @@ import { DataTablesModule } from 'angular-datatables';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     //AllComponentsModule,
     BrowserAnimationsModule,
