@@ -32,6 +32,7 @@ import { LoginComponent } from './admin/login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { DashboardNavComponent } from './admin/dashboard/dashboard-nav/dashboard-nav.component';
 import { SetMrpComponent } from './admin/dashboard/set-mrp/set-mrp.component';
+import { ProductViewComponent } from './product/product-view/product-view.component';
 
 //Used For Checkbox
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -53,6 +54,8 @@ import { ReactiveFormsComponent } from './components/forms/reactive-forms/reacti
 
 //for DataTables
 import { DataTablesModule } from 'angular-datatables';
+import { ChildComponent } from './components/child/child.component';
+import { ParentsComponent } from './components/parents/parents.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,9 @@ import { DataTablesModule } from 'angular-datatables';
     LapiOffersComponent,
     TempFormsComponent,
     ReactiveFormsComponent,
+    ProductViewComponent,
+    ChildComponent,
+    ParentsComponent,
   ],
   imports: [
     BrowserModule,

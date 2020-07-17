@@ -22,11 +22,13 @@ import { AuthGuard } from '../guards/auth.guard';
 import { AdminGuard } from '../guards/admin.guard';
 import { LapiDetailsComponent } from '../product/laptops/lapi-details/lapi-details.component';
 import { LapiOffersComponent } from '../product/laptops/lapi-offers/lapi-offers.component';
+import { ProductViewComponent } from '../product/product-view/product-view.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'tempForm', component: TempFormsComponent },
   { path: 'reactiveForm', component: ReactiveFormsComponent },
+  { path: 'product-view/:prodObj', component: ProductViewComponent },
 
   { path: '', component: HomeComponent },
   {

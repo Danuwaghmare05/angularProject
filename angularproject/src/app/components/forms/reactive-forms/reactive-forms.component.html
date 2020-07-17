@@ -7,6 +7,7 @@
 
     <div style="color: red;" *ngIf="uName.touched && uName.invalid">
       <div *ngIf="uName.errors.required">Required...!</div>
+      <div *ngIf="uName.errors.noSpace">Nospace...!</div>
       <div *ngIf="uName.errors.minlength">
         Min {{ uName.errors.minlength.requiredLength }} length
       </div>
