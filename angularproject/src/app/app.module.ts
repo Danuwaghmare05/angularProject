@@ -56,6 +56,7 @@ import { ReactiveFormsComponent } from './components/forms/reactive-forms/reacti
 import { DataTablesModule } from 'angular-datatables';
 import { ChildComponent } from './components/child/child.component';
 import { ParentsComponent } from './components/parents/parents.component';
+import { HttpPostsComponent } from './components/http-posts/http-posts.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { ParentsComponent } from './components/parents/parents.component';
     ProductViewComponent,
     ChildComponent,
     ParentsComponent,
+    HttpPostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,7 +110,9 @@ import { ParentsComponent } from './components/parents/parents.component';
     DataTablesModule,
   ],
 
-  bootstrap: [AppComponent],
+  //bootstrap: [AppComponent],
+  bootstrap: [HttpPostsComponent],
+
   providers: [CommonService, AuthGuard],
 })
 export class AppModule {}
