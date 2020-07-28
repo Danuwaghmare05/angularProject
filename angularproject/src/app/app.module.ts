@@ -42,6 +42,8 @@ import { AllMaterialsModule } from './modules/all-materials.module';
 import { LazyModule } from './modules/lazy/lazy.module';
 import { LoginMrpComponent } from './admin/dashboard/login-mrp/login-mrp.component';
 
+import { HttpPostsComponent } from './components/http-posts/http-posts.component';
+
 //for Cloud Hosting
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -56,7 +58,6 @@ import { ReactiveFormsComponent } from './components/forms/reactive-forms/reacti
 import { DataTablesModule } from 'angular-datatables';
 import { ChildComponent } from './components/child/child.component';
 import { ParentsComponent } from './components/parents/parents.component';
-import { HttpPostsComponent } from './components/http-posts/http-posts.component';
 
 @NgModule({
   declarations: [
