@@ -111,8 +111,8 @@ import { ParentsComponent } from './components/parents/parents.component';
     DataTablesModule,
   ],
 
-  //bootstrap: [AppComponent],
-  bootstrap: [HttpPostsComponent],
+  bootstrap: [AppComponent],
+  //bootstrap: [HttpPostsComponent],
 
   providers: [CommonService, AuthGuard],
 })
